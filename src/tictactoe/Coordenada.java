@@ -19,7 +19,6 @@ public class Coordenada {
         return columna;
     }
 
-    // Mètode per comprovar si la coordenada és vàlida per una dimensió donada
     public boolean isValida(int dimensio) {
         // Comprovar si la fila està dins de l'alfabet (de la A a la Z)
         int filaIndex = fila - 'A' + 1; // Converteix la lletra a un número (A=1, B=2, C=3, ...)

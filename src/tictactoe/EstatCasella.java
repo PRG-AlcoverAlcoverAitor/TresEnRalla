@@ -14,4 +14,7 @@ public enum EstatCasella {
     public String getSimbol() {
         return simbol;
     }
+    
+    
+    
 }
