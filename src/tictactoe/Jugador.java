@@ -18,7 +18,7 @@ public class Jugador {
         Coordenada coordenada;
 
         while (true) {
-            System.out.print("Introdueix casella [Lletra-Número]: ");
+            System.out.print("Introdueix casella [Lletra-Numero]: ");
             String entrada = GestorIO.llegirCadena().toUpperCase().trim();
 
             if (entrada.matches("^[A-Z]-\\d+$")) {
@@ -28,14 +28,18 @@ public class Jugador {
 
                 coordenada = new Coordenada(fila, columna);
 
-                if (tauler.isCoordenadaValida(coordenada)) {
+                if (tauler.isCoordenadaValida(coordenada) && !tauler.isOcupada(coordenada)) {
                     return coordenada;
                 } else {
-                    System.out.println("¡Error! Coordenada fora de rang. Introdueix una vàlida.");
+                    System.out.println("¡Error! Coordenada fora de rango o ocupada. Introdueix una valida.");
                 }
             } else {
-                System.out.println("¡Error! Format incorrecte. Usa el format [Lletra-Número] (ex: A-1).");
+                System.out.println("¡Error! Format incorrecte. Usa el format [Lletra-Numero] (ex: A-1).");
             }
         }
+    }
+    
+    public void cantarVictoria(){
+        System.out.println("¡El jugador " + this.casilla.getSimbol() + " ha guanyat!");
     }
 }

@@ -40,11 +40,7 @@ public class Tauler {
     public void posarFitxa(Coordenada coordenada, EstatCasella tipusFitxa) {
         int filaIndex = coordenada.getFila() - 'A';
         int columnaIndex = coordenada.getColumna() - 1;
-        if (!isOcupada(coordenada) && !isCoordenadaValida(coordenada)) {
-            caselles[filaIndex][columnaIndex] = tipusFitxa;
-        } else {
-            System.out.println("¡Error! Aquesta casella ja està ocupada o no existeix.");
-        }
+        caselles[filaIndex][columnaIndex] = tipusFitxa;
     }
 
     public void mostrar() {
