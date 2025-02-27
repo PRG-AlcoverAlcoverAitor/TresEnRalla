@@ -15,6 +15,4 @@ public enum EstatCasella {
         return simbol;
     }
     
-    
-    
 }
